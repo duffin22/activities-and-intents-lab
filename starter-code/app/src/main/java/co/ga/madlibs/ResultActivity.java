@@ -1,5 +1,6 @@
 package co.ga.madlibs;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
@@ -16,7 +17,7 @@ public class ResultActivity extends AppCompatActivity {
     public static final String ADJECTIVE1 = "adj1";
     public static final String ADJECTIVE2 = "adj2";
     public static final String NOUN1 = "noun1";
-    public static final String NOUN2 = "noun";
+    public static final String NOUN2 = "noun2";
     public static final String ANIMALS = "animals";
     public static final String GAME = "game";
 
@@ -42,24 +43,25 @@ public class ResultActivity extends AppCompatActivity {
 
     private void setResults() {
         String[] words = new String[6];
-        Bundle extras = getIntent().getExtras();
+        //Bundle extras = getIntent().getExtras();
+        Intent intent=getIntent();
 
-        if (extras != null) {
-            words[0] = extras.getString(ADJECTIVE1, "???");
-            words[1] = extras.getString(ADJECTIVE2, "???");
-            words[2] = extras.getString(NOUN1, "???");
-            words[3] = extras.getString(NOUN2, "???");
-            words[4] = extras.getString(ANIMALS, "???");
-            words[5] = extras.getString(GAME, "???");
+        //if (extras != null) {
+            words[0] = intent.getStringExtra(ADJECTIVE1);
+            words[1] = intent.getStringExtra(ADJECTIVE2);
+            words[2] = intent.getStringExtra(NOUN1);
+            words[3] = intent.getStringExtra(NOUN2);
+            words[4] = intent.getStringExtra(ANIMALS);
+            words[5] = intent.getStringExtra(GAME);
 
             String resultString = getString(R.string.madlib_result, words);
 
             resultString = addIndefiniteArticles(resultString, words[2], words[3]);
 
             resultTextView.setText( Html.fromHtml(resultString) );
-        } else {
-            Toast.makeText(ResultActivity.this, "Did you set the words as extra data in the Intent?", Toast.LENGTH_SHORT).show();
-        }
+//        } else {
+//            Toast.makeText(ResultActivity.this, "Did you set the words as extra data in the Intent?", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     private String addIndefiniteArticles(String sentence, String... nouns){

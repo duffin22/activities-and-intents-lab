@@ -11,6 +11,55 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/adj1Text"
+                android:layout_alignParentTop="true"
+                android:hint="enter a adjective"
+                android:layout_marginBottom="@dimen/margin_between_editTexts"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/adj2Text"
+                android:hint="enter a adjective"
+                android:layout_marginBottom="@dimen/margin_between_editTexts"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noun1Text"
+                android:hint="enter a noun"
+                android:layout_marginBottom="@dimen/margin_between_editTexts"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noun2Text"
+                android:hint="enter a noun"
+                android:layout_marginBottom="@dimen/margin_between_editTexts"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/animalText"
+                android:hint="enter a type of animal"
+                android:layout_marginBottom="@dimen/margin_between_editTexts"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gameText"
+                android:hint="enter a game"
+                android:layout_marginBottom="@dimen/margin_between_editTexts"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Make the magic happen"
+                android:id="@+id/MainButton"/>
+
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

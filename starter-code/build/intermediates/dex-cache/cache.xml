@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/matthewtduffin/Code/week2/activities-and-intents-lab/starter-code/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ef3aa84923b0e2c3fc821e2f9d2b0aadc2fc8db8">
+        <dex dex="/Users/matthewtduffin/Code/week2/activities-and-intents-lab/starter-code/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_e85192946ac1a73d0d8f47a9dd21524174fdb9c9.jar" />
+    </item>
+
+</items>
